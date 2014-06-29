@@ -18,14 +18,14 @@ void GameWorld::init()
 	State.Ships.pushBack(State.Player);
 	
 	StarSystem A;
-	A.Position.Y = 500;
-	A.Radius = 1000;
+	A.Position.Y = 2500;
+	A.Radius = 2000;
 	A.BackgroundFogColorsA = RGB(0, 0.55f, 0.15f, 0.75f);
 	State.Systems.pushBack(A);
 	
 	StarSystem B;
-	B.Position.Y = -500;
-	B.Radius = 1000;
+	B.Position.Y = -2500;
+	B.Radius = 2000;
 	B.BackgroundFogColorsA = RGB(0.25f, 0.0f, 0.15f, 0.75f);
 	B.BackgroundFogColorsB = RGB(0.75f, 0.3f, 0.1f, 0.75f);
 	B.ForegroundStarColor  = RGB(2.25f, 1.75f, 0.5f, 1.0f);

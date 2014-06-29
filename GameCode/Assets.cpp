@@ -14,6 +14,7 @@ void Assets::init()
 	BackgroundFog = Image("Background/Fog01.png");
 	BackgroundStars = Image("Background/Stars.png");
 	SystemDebugSprite = Image("Systems/Debug.png");
+	SystemRadiusSprite = Image("Systems/RadiusDebug.png");
 	Arrow = LineStyle(Image("HUD/Arrow.png"), 10, 10);
 	
 	ToneMappingShader = ShaderProgram("ToneMap.Fragment.glsl");

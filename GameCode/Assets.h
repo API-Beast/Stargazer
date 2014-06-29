@@ -17,6 +17,7 @@ struct Assets
 	Image BackgroundFog;
 	Image BackgroundStars;
 	Image SystemDebugSprite;
+	Image SystemRadiusSprite;
 	LineStyle Arrow;
 	ShaderProgram ToneMappingShader;
 };

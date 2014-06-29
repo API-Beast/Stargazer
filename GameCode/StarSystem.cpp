@@ -14,5 +14,6 @@ float StarSystem::alphaAt(Vec2F point)
 
 void StarSystem::draw(SpriteRenderer* r)
 {
-	r->draw(gAssets.SystemDebugSprite, Position, ForegroundStarColor);
+	r->drawStretched(gAssets.SystemDebugSprite, Position, CoreSize, CoreColor);
+	r->drawStretched(gAssets.SystemRadiusSprite, Position, Radius*2, CoreColor);
 }

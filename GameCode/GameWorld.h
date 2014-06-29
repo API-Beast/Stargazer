@@ -38,6 +38,7 @@ struct GameState
 	List<Ship*>       Ships;
 	ObjPtr<Ship>      Player;
 	List<StarSystem>  Systems;
+	List<Planet>      Planets;
 	
 	void update(float deltaTime);
 	void applyPhysics(GameObject* obj, float dt);

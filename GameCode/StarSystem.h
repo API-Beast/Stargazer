@@ -15,9 +15,16 @@ struct StarSystem : public StaticObject
 	
 	// Vec2F Position from StaticObject
 	float Radius;
+	float CoreSize = 200;
+	
+	ColorRGB  CoreColor = Colors::White;
 	
 	ColorRGBA BackgroundStarColor  = Colors::Transparent;
 	ColorRGBA BackgroundFogColorsA = Colors::Transparent;
 	ColorRGBA BackgroundFogColorsB = Colors::Transparent;
 	ColorRGBA ForegroundStarColor  = Colors::Transparent;
+};
+
+struct Planet : public StaticObject
+{
 };
