@@ -123,6 +123,22 @@ Vec2F DirectionControl::direction()
 					result += Vec2F(dev->axisState(XAxis), dev->axisState(YAxis));
 			}
 	}
+	//
+	// By Mouse
+	//
+	else if(Type == Mouse)
+	{
+		if(Device)
+		{
+			if((MouseButton == -1) || Device->isKeyPressed(MouseButton))
+				result = Device->cursorPosition();
+		}
+		else if(Monitor)
+		{
+			if((MouseButton == -1) || Monitor->isMouseButtonPressed(MouseButton))
+				result = Monitor->mousePosition();
+		}
+	}
 	
 	// ...aaand finish
 	if(result.length() > 1.00f)

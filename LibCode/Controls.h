@@ -26,7 +26,8 @@ struct DirectionControl
 		Invalid,
 		ButtonByName,
 		ButtonByIndex,
-		DPad
+		DPad,
+		Mouse
 	};
 	
 	struct ButtonDec
@@ -50,6 +51,7 @@ struct DirectionControl
 	List<ButtonNameDec> ButtonNames;
 	int XAxis;
 	int YAxis;
+	int MouseButton = -1;
 	
 	List<DirectionControl> Alternatives;
 };

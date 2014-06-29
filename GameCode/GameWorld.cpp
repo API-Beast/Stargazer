@@ -40,7 +40,10 @@ void GameWorld::setupDisplay(GameSurface* surface)
 
 void GameWorld::setupInput(InputMonitor* input)
 {
-	Controls.Rotation = DirectionControl::FourButton(input, "W", "S", "A", "D");
+	//Controls.Rotation = DirectionControl::FourButton(input, "W", "S", "A", "D");
+	Controls.Rotation.Type = DirectionControl::Mouse;
+	Controls.Rotation.Device = input->mouse();
+	Controls.Rotation.MouseButton = 0;
 }
 
 namespace
