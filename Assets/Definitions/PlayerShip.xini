@@ -1,0 +1,6 @@
+Identifier=PlayerShip
+Sprite=Ship/Player.png
+SpriteOverlay=Ship/PlayerOverlay.png
+Picture=Ship/FighterPicture.png
+PictureOverlay=Ship/FighterPictureOverlay.png
+EngineAccleration=350

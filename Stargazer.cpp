@@ -22,6 +22,9 @@ Stargazer::~Stargazer()
 
 int Stargazer::execute()
 {	
+	World.init();
+	World.setupDisplay(Surface);
+	World.setupInput(Input);
 	Clock.start();
 	while(!IsFinished)
 	{
@@ -33,7 +36,7 @@ int Stargazer::execute()
 		float deltaTime = Clock.elapsed();
 		Clock.start();
 		Renderer->clear();
-		World.update(deltaTime);
+		World.update(deltaTime, Input);
 		World.draw(Renderer);
 		Renderer->flush();
 		Surface->switchBuffers();

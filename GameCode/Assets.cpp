@@ -6,7 +6,17 @@
 
 #include "Assets.h"
 
+Assets gAssets;
+
 void Assets::init()
 {
-	Font.loadGrid(Image("HUD/Font16.png"), 0, 16);
+	Font.loadGrid(Image("Font16.png"), 0, 16);
+	BackgroundFog = Image("Background/Fog01.png");
+	BackgroundStars = Image("Background/Stars.png");
+	SystemDebugSprite = Image("Systems/Debug.png");
+	Arrow = LineStyle(Image("HUD/Arrow.png"), 10, 10);
+	
+	ToneMappingShader = ShaderProgram("ToneMap.Fragment.glsl");
+	ToneMappingShader.FragmentShader->compile();
+	ToneMappingShader.link();
 }

@@ -7,12 +7,18 @@
 #pragma once
 
 #include <Springbok/Graphics.hpp>
+#include <Springbok/Shapes.hpp>
 
 struct Assets
 {
 	void init();
 	
 	BitmapFont Font;
+	Image BackgroundFog;
+	Image BackgroundStars;
+	Image SystemDebugSprite;
+	LineStyle Arrow;
+	ShaderProgram ToneMappingShader;
 };
 
 extern Assets gAssets;

@@ -13,7 +13,10 @@ find_package(OpenAL REQUIRED)
 
 include_directories(${SPRINGBOK_INCLUDE_DIR})
 
-set(SRC_GAME Stargazer.cpp GameCode/GameWorld.cpp)
+set(SRC_GAME Stargazer.cpp
+             GameCode/GameWorld.cpp GameCode/Assets.cpp GameCode/Ship.cpp GameCode/GameObject.cpp GameCode/StarSystem.cpp
+	           LibCode/Controls.cpp
+	 )
 file(GLOB_RECURSE HEADERS "*.h" "*.hpp")
 
 add_executable(Stargazer main.cpp 

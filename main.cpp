@@ -6,9 +6,11 @@
 
 #include <iostream>
 #include "Stargazer.h"
+#include <Springbok/Resources.hpp>
 
 int main(int argc, char **argv)
 {
+	ResourceManager::GetInstance()->findPrimaryResourcePath({FileSystem::ParentPath(__FILE__)+"/Assets", "./Assets"});
 	Stargazer game;
 	return game.execute();
 }
