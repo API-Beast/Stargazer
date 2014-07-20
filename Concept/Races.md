@@ -30,7 +30,7 @@ Invidual ships are 100% loyal to their own race. In a Dilema they will always ch
 
 All conquered planets are wiped.
 
-# Mini-Race Brainstorming
+# Mini-Races
 
 Mini-Races are rare occurances but have more interesting ("overpowered" if the game weren't about exploration) mechanics than the main races.
 
