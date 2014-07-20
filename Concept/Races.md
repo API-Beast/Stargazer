@@ -34,9 +34,6 @@ All conquered planets are wiped.
 
 Mini-Races are rare occurances but have more interesting ("overpowered" if the game weren't about exploration) mechanics than the main races.
 
-- Spectrals? Can control any planet without needing to assimilate or wipe it. Spooky. Maybe make them give controlled ships some kind of bonus?
-- Swarms? Live on ships, planets are not conquered, only wiped which produces some additional ships. Very powerful but unable to control the universe.
-
 ## Crystaloids
 
 Very strong but also very slow, both in production and assimilation. In most cases they just defend their own planets.
@@ -45,3 +42,8 @@ Ships are surrounded by a aura that slows down and damages any nearby hostile sh
 Since planets are defended by many of these ships they are near inconquerable.
 
 Ice cold visuals.
+
+## Other ideas
+
+- Spectrals? Can control any planet without needing to assimilate or wipe it. Spooky. Maybe make them give controlled ships some kind of bonus?
+- Swarms? Live on ships, planets are not conquered, only wiped which produces some additional ships. Very powerful but unable to control the universe.
