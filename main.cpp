@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include "Stargazer.h"
-#include <Springbok/Resources.hpp>
+#include <Springbok/Foundation.hpp>
 
 int main(int argc, char **argv)
 {

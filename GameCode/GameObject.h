@@ -6,11 +6,10 @@
 
 #pragma once
 
-#include <Springbok/Types.hpp>
-#include <Springbok/Geometry/BoundingShapes.h>
-#include <Springbok/Types/ObjectPointer.h>
-#include <Springbok/Parsing/ConfigFile.h>
-#include <Springbok/Containers.hpp>
+#include <Springbok/Foundation.hpp>
+#include <Springbok/Serialization.hpp>
+#include "../LibCode/BoundingShapes.h"
+#include "../LibCode/List.h"
 
 #include <string>
 
@@ -56,5 +55,5 @@ struct GameObject : public PhysicsObject
 
 struct Serializable
 {
-	virtual void deserialize(ConfigFile::Object obj);
+	virtual void deserialize(const ValueTree& obj);
 };

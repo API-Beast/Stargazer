@@ -7,24 +7,23 @@
 #include "GameObject.h"
 #include "Assets.h"
 #include <Springbok/Graphics.hpp>
-#include <Springbok/Shapes.hpp>
 
-void Serializable::deserialize(ConfigFile::Object obj)
+void Serializable::deserialize(const ValueTree& obj)
 {
 
 }
 
 void GameObject::drawDebug(SpriteRenderer& r)
 {
-	r.draw(LineShape::Arrow(Acceleration, gAssets.Arrow), Position, Colors::Dawn::Red[2]);
-	r.draw(LineShape::Arrow(Speed,        gAssets.Arrow), Position, Colors::Dawn::Blue[2]);
+	r.draw(LineShape::Arrow(Acceleration, gAssets.Arrow), Position, Int2Color(0xffffa22f));
+	r.draw(LineShape::Arrow(Speed,        gAssets.Arrow), Position, Int2Color(0xff5fcde4));
 	for(Vec2F force : VecForces)
-		r.draw(LineShape::Arrow(force, gAssets.Arrow), Position, Colors::Dawn::Purple[2]);
+		r.draw(LineShape::Arrow(force, gAssets.Arrow), Position, Int2Color(0xdff77bba));
 	
 	Transform2D t = Position2D(Position) + Rotate2D(Rotation);
 	r.draw(LineShape::TurnIndicator(Angle::FromTurn(RotationSpeed), 50, gAssets.Arrow), t);
 	for(Angle angle : RotForces)
-		r.draw(LineShape::TurnIndicator(angle, 50, gAssets.Arrow), t, Colors::Dawn::Yellow[2]);
+		r.draw(LineShape::TurnIndicator(angle, 50, gAssets.Arrow), t, Int2Color(0xfffbf236));
 }
 
 void GameObject::update(GameState* state, float dt)

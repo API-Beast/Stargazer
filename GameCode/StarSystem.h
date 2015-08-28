@@ -17,12 +17,12 @@ struct StarSystem : public StaticObject
 	float Radius;
 	float CoreSize = 200;
 	
-	ColorRGB  CoreColor = Colors::White;
+	Vec3F  CoreColor = Colors::White;
 	
-	ColorRGBA BackgroundStarColor  = Colors::Transparent;
-	ColorRGBA BackgroundFogColorsA = Colors::Transparent;
-	ColorRGBA BackgroundFogColorsB = Colors::Transparent;
-	ColorRGBA ForegroundStarColor  = Colors::Transparent;
+	Vec4F BackgroundStarColor  = Colors::Transparent;
+	Vec4F BackgroundFogColorsA = Colors::Transparent;
+	Vec4F BackgroundFogColorsB = Colors::Transparent;
+	Vec4F ForegroundStarColor  = Colors::Transparent;
 };
 
 struct Planet : public StaticObject

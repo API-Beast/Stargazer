@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <Springbok/Types.hpp>
-#include <Springbok/Containers.hpp>
+#include <Springbok/Foundation.hpp>
+#include "List.h"
 
 class InputDevice;
 class InputMonitor;

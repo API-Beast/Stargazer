@@ -40,6 +40,7 @@ int Stargazer::execute()
 		World.draw(Renderer);
 		Renderer->flush();
 		Surface->switchBuffers();
+		Input->poll();
 	}
 	return 0;
 }

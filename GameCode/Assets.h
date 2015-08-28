@@ -7,7 +7,6 @@
 #pragma once
 
 #include <Springbok/Graphics.hpp>
-#include <Springbok/Shapes.hpp>
 
 struct Assets
 {

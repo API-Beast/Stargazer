@@ -22,7 +22,7 @@ struct ShipDefinition : public Serializable
 	float EngineAccleration;
 	
 	void loadFromPath(const std::string& path);
-	virtual void deserialize(ConfigFile::Object obj);
+	virtual void deserialize(const ValueTree& obj);
 };
 
 struct Ship : public GameObject

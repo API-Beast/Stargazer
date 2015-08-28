@@ -40,10 +40,10 @@ void GameWorld::setupDisplay(GameSurface* surface)
 
 void GameWorld::setupInput(InputMonitor* input)
 {
-	//Controls.Rotation = DirectionControl::FourButton(input, "W", "S", "A", "D");
-	Controls.Rotation.Type = DirectionControl::Mouse;
-	Controls.Rotation.Device = input->mouse();
-	Controls.Rotation.MouseButton = 0;
+    //Controls.Rotation = DirectionControl::FourButton(input, "W", "S", "A", "D");
+    Controls.Rotation.Type = DirectionControl::Mouse;
+    Controls.Rotation.Device = input->mouse();
+    Controls.Rotation.MouseButton = 0;
 }
 
 namespace
@@ -68,10 +68,10 @@ void GameWorld::draw(SpriteRenderer* r)
 	r->Context.setRenderTarget(HDRTarget);
 	r->Context.setShader(ShaderProgram::GetDefaultShader());
 	
-	ColorRGBA BackgroundStarColor  = Colors::Dawn::Turquoise[1];
-	ColorRGBA BackgroundFogColorsA = ColorRGBA(Colors::Dawn::Charcoal[2], 0.5f);
-	ColorRGBA BackgroundFogColorsB = ColorRGBA(Colors::Dawn::Purple[1], 0.5f);
-	ColorRGBA ForegroundStarColor  = Colors::Transparent;
+	Vec4F BackgroundStarColor  = Int2Color(0x306e82);
+	Vec4F BackgroundFogColorsA = RGB(0.45, 0.44, 0.48, 0.5);
+	Vec4F BackgroundFogColorsB = RGB(0.46, 0.22, 0.54, 0.5);
+	Vec4F ForegroundStarColor  = RGB(0.0, 0.0, 0.0, 0.0);
 	
 	for(StarSystem& sys : State.Systems)
 	{

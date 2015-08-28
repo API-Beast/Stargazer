@@ -8,25 +8,24 @@
 
 #include "Assets.h"
 
-#include <Springbok/Animation.hpp>
-#include <Springbok/Parsing/ConfigFile.h>
-#include <Springbok/Graphics/SpriteRenderer.h>
-#include <Springbok/Shapes/LineShape.h>
+#include <Springbok/Utils.hpp>
+#include <Springbok/Serialization.hpp>
+#include <Springbok/Graphics.hpp>
 
-void ShipDefinition::deserialize(ConfigFile::Object obj)
+void ShipDefinition::deserialize(const ValueTree& obj)
 {
-	Sprite            = Image(obj["Sprite"]);
-	SpriteOverlay     = Image(obj["SpriteOverlay"]);
-	Picture           = Image(obj["Picture"]);
-	PictureOverlay    = Image(obj["PictureOverlay"]);
-	EngineAccleration = obj["EngineAccleration"].toFloat();
-	Identifier        = obj["Identifier"];
+	Sprite            = Image(obj.value("Sprite"));
+	SpriteOverlay     = Image(obj.value("SpriteOverlay"));
+	Picture           = Image(obj.value("Picture"));
+	PictureOverlay    = Image(obj.value("PictureOverlay"));
+	EngineAccleration = std::stof(obj.value("EngineAccleration"));
+	Identifier        = obj.value("Identifier");
 }
 
 void ShipDefinition::loadFromPath(const std::string& path)
 {
-	ConfigFile file(path);
-	deserialize(file.Root);
+	ValueTree root = LoadXINI(ResourceManager::GetInstance()->getPath(path));
+	deserialize(root);
 }
 
 Ship::Ship(ShipDefinition* def)
@@ -37,7 +36,7 @@ Ship::Ship(ShipDefinition* def)
 void Ship::drawSprite(SpriteRenderer& r)
 {
 	Transform2D t = Position2D(Position) + Rotate2D(Rotation);
-	Color c = Colors::White;
+	Vec4F c = RGB(1.0, 1.0, 1.0, 1.0);
 	//if(Acceleration.isNull())
 	//	c = Colors::Blue;
 	r.draw(Definition->Sprite, t, c);
